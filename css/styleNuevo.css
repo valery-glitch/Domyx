@@ -1,0 +1,268 @@
+/* ============================================
+    DOMYX – ESTILOS 
+============================================= */
+:root {
+    --p50:  #38085f;
+    --p100: #1d0135;
+    --p200: rgb(160, 72, 243);
+
+    --success: #22c55e;
+    --danger:  #ef4444;
+    --info:    #3498db;
+    --warning: #f59e0b;
+
+    --bg: #0b0118;
+    --surface: #120022;
+    --surface-2: #1a0030;
+    --surface-3: #200038;
+
+    --sombra: rgba(160, 72, 243, 0.092);;
+
+    --border: rgba(160, 72, 243, 0.233);
+    --border-md: rgba(161, 72, 243, 0.28);
+
+    --text-1: #f5f0ff;
+    --text-2: #f5f0ff8c;
+    --text-3: #f5f0ff4d;
+
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --sidebar-width: 250px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text-2);
+}
+
+body {
+    background: var(--bg);
+    font-family: var(--font-body);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1050;
+}
+
+.topbar-domyx {
+    height: 70px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0 28px;
+}
+
+/* Logo Header */
+.logo-domyx {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text-1);
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.logo-domyx:hover {
+    color: var(--text-1);
+    opacity: 0.9;
+}
+
+.logo-domyx span {
+    color: var(--p500);
+}
+
+/* Sidebar */
+.sidebar-domyx {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: var(--sidebar-width);
+    height: calc(100vh - 70px);
+    background: var(--surface);
+    transition: transform 0.7s ease;
+    overflow-y: auto;
+    scrollbar-width: none;
+    z-index: 1040;
+}
+
+.sidebar-nav{
+    padding: 20px 0;
+}
+
+.nav-group-label{
+    padding: 16px 20px 6px;
+    font-family: var(--font-display);
+    font-size: 0.9em;
+    color: var(--text-2);
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.nav-item{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--text-2);
+    font-size: 0.8em;
+}
+
+.nav-item:active {
+    background: rgba(161, 72, 243, 0.25);  
+    color: var(--p400);                     
+    border-left: 3px solid var(--p500);    
+    font-weight: 600;                      
+}
+
+.nav-item:hover{
+    background: rgba(161, 72, 243, 0.15);
+    color: var(--text-1);
+}
+
+.title {
+    font-family: var(--font-body);
+    font-size: 1.2em;
+    font-weight: 800;
+    color: var(--text-1);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.subtitle {
+    color: var(--text-2);
+    margin-bottom: 1rem;
+}
+
+.cont {
+    margin-left: var(--sidebar-width);
+    padding: 24px 32px 40px;
+    flex: 1; 
+}
+
+.card-form {
+    border: none;
+    border-radius: 15px;
+    background-color: var(--surface);
+    box-shadow: 0 0 10px var(--border);
+
+}
+
+.table-container {
+    background: var(--surface);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 2rem;
+    box-shadow: 0 0 10px var(--border);
+        
+}
+
+table {
+    width: 100%;
+    background-color: var(--surface);
+    border-collapse: separate;
+    text-align: center;
+  
+}
+
+td{
+    border-radius: 10px;
+    
+}
+
+th{
+    color: var(--text-1);
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--surface-3);
+
+}
+
+table tbody tr:nth-of-type(even) {
+    background-color: #e6edf814 ;
+}
+
+/*background-color: #e6edf82a ;*/ 
+
+
+label{
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/*Botones*/
+.btn-submit {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    color: #fff;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 12px;
+    padding: 8px 16px;
+    border-radius: 12px;
+    transition: .3s;
+}
+
+.btn-submit:hover {
+    background: var(--p50);
+    color: var(--text-1);
+}
+
+/*Formulario*/
+.form-control, .form-select {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 10px 14px;
+    color: var(--text-1);
+    font-size: 13px;
+    margin: 5px 0 10px 0;
+
+}
+.form-control:focus, .form-select:focus {
+    background: var(--surface-2);
+    color: var(--text-1);
+    border-color: var(--p500);
+    box-shadow: 0 0 0 0.2rem rgba(161, 75, 243, 0.25);
+}
+.form-control::placeholder { color: var(--text-3); }
+
+
+    
+/*Footer*/
+footer {
+    margin-top: auto;
+    padding: 20px 0;
+    font-weight: 600;
+}
+
+.bottombar-domyx {
+    background: var(--surface);
+    backdrop-filter: blur(8px);
+    padding: 16px 24px;
+    margin-left: var(--sidebar-width);  
+    font-size: 0.85rem;
+    text-align: center;
+}
+ 
+@media (max-width: 768px) {
+    .sidebar-domyx {
+        transform: translateX(-100%);
+        width: 250px;
+    }
+
+    .sidebar-domyx.active {
+        transform: translateX(0);
+    }
+
+    .cont {
+        margin-left: 0;
+        width: 100%;
+    }
+}
